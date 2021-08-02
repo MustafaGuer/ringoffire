@@ -1,5 +1,5 @@
 export class Game {
-    public players: string[] = [];
+    public players: string[] = ['Hans', 'Freddy', 'Peter'];
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
@@ -16,7 +16,7 @@ export class Game {
     }
 }
 
-function shuffle(array: any) { // !!!!!!!!!!!!!!!!!!!!!!!   Why do i have to write here 'any'????????
+function shuffle(array) { // hier kam ein fehler vor dem strict 
     var currentIndex = array.length,  randomIndex;
   
     while (0 !== currentIndex) {
