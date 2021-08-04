@@ -73,3 +73,19 @@
         right: 0;
     }
 }
+
+.scroll-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+app-player-mobile {
+    margin-left: 8px;
+}
+.hide-scroll::-webkit-scrollbar {
+    display: none;
+}
