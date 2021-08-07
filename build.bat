@@ -1,5 +1,6 @@
 git add .
-git commit -m "New Version"
+set /p commit=Enter your Commit: 
+git commit -m "%commit%"
 git push
 ng build --prod --base-href="/"
 firebase deploy
