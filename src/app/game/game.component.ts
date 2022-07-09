@@ -12,14 +12,8 @@ import { EditPlayerComponent } from '../edit-player/edit-player.component';
   styleUrls: ['./game.component.scss'],
 })
 export class GameComponent implements OnInit {
-<<<<<<< HEAD
   public game: Game;
   private gameId: string;
-=======
-  game: Game;
-  gameId: string;
-  gameOver = false;
->>>>>>> aa74ecb994e9e4b69dd228b9ef86639216101d35
 
   constructor(
     private route: ActivatedRoute,
@@ -101,20 +95,11 @@ export class GameComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
   private saveGame(): void {
     this
       .firestore
-=======
-  saveGame() {
-    this.firestore
->>>>>>> aa74ecb994e9e4b69dd228b9ef86639216101d35
       .collection('games')
       .doc(this.gameId)
       .update(this.game.toJson());
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> aa74ecb994e9e4b69dd228b9ef86639216101d35
 }
