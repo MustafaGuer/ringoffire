@@ -1,11 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
-import { DialogAddPlayerComponent } from './dialog-add-player.component';
+import { EditPlayerComponent } from './edit-player.component';
 
-describe('DialogAddPlayerComponent', () => {
-  let component: DialogAddPlayerComponent;
-  let fixture: ComponentFixture<DialogAddPlayerComponent>;
+describe('EditPlayerComponent', () => {
+  let component: EditPlayerComponent;
+  let fixture: ComponentFixture<EditPlayerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -18,13 +18,13 @@ describe('DialogAddPlayerComponent', () => {
           useValue: {}
         }
       ],
-      declarations: [ DialogAddPlayerComponent ]
+      declarations: [EditPlayerComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DialogAddPlayerComponent);
+    fixture = TestBed.createComponent(EditPlayerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
