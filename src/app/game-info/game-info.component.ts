@@ -6,7 +6,7 @@ import { Component, Input, OnInit, OnChanges } from '@angular/core';
   styleUrls: ['./game-info.component.scss']
 })
 export class GameInfoComponent implements OnInit, OnChanges {
-  cardAction = [
+  public cardAction: any = [
     { title: 'Waterfall', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
     { title: 'You', description: 'You decide who drinks' },
     { title: 'Me', description: 'Congrats! Drink a shot!' },
@@ -22,8 +22,8 @@ export class GameInfoComponent implements OnInit, OnChanges {
     { title: 'Rule', description: 'Make a rule. Everyone needs to drink when he breaks the rule.' },
   ];
 
-  title = '';
-  description = '';
+  public title = '';
+  public description = '';
   @Input() card: string;
 
   constructor() { }

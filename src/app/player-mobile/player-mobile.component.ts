@@ -6,9 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./player-mobile.component.scss']
 })
 export class PlayerMobileComponent implements OnInit {
-  @Input() name;
-  @Input() playerActive;
-  
+  @Input() name: string;
+  @Input() playerActive: boolean;
+
   constructor() { }
 
   ngOnInit(): void {

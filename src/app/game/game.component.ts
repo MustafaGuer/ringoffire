@@ -13,8 +13,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  game: Game;
-  gameId: string;
+  public game: Game;
+  private gameId: string;
 
   constructor(private route: ActivatedRoute, private firestore: AngularFirestore, public dialog: MatDialog) { }
 
@@ -41,11 +41,11 @@ export class GameComponent implements OnInit {
     });
   }
 
-  newGame() {
+  private newGame(): void {
     this.game = new Game();
   }
 
-  takeCard() {
+  public takeCard(): void {
     if (!this.game.pickCardAnimation) {
       this.game.currentCard = this.game.stack.pop();
       this.game.pickCardAnimation = true;
@@ -63,7 +63,7 @@ export class GameComponent implements OnInit {
   }
 
 
-  openDialog(): void {
+  public openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
     dialogRef.afterClosed().subscribe((name: string) => {
@@ -74,7 +74,7 @@ export class GameComponent implements OnInit {
     });
   }
 
-  saveGame() {
+  private saveGame(): void {
     this
       .firestore
       .collection('games')

@@ -7,14 +7,14 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./dialog-add-player.component.scss']
 })
 export class DialogAddPlayerComponent implements OnInit {
-  name: string = '';
+  public name: string = '';
 
   constructor(public dialogRef: MatDialogRef<DialogAddPlayerComponent>) { }
 
   ngOnInit(): void {
   }
 
-  onNoClick() {
+  public onNoClick(): void {
     this.dialogRef.close();
   }
 
